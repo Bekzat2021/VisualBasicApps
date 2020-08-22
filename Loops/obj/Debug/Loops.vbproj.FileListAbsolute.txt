@@ -1,0 +1,10 @@
+C:\Users\bekza\Desktop\VB\Loops\Loops\bin\Debug\Loops.exe.config
+C:\Users\bekza\Desktop\VB\Loops\Loops\bin\Debug\Loops.exe
+C:\Users\bekza\Desktop\VB\Loops\Loops\bin\Debug\Loops.pdb
+C:\Users\bekza\Desktop\VB\Loops\Loops\bin\Debug\Loops.xml
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.vbprojAssemblyReference.cache
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.Resources.resources
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.vbproj.GenerateResource.cache
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.exe
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.xml
+C:\Users\bekza\Desktop\VB\Loops\Loops\obj\Debug\Loops.pdb
