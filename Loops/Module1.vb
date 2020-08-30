@@ -2,31 +2,20 @@
 
     Sub Main()
 
-        Dim random As New Random()
-        Dim numbers(10) As Integer
-
-        For i As Integer = 0 To numbers.Length - 1
-            numbers(i) = random.Next(10)
-            Console.Write(numbers(i) & " ")
-        Next
-        Console.WriteLine()
-
-        Dim temp As Integer
-        For i As Integer = 0 To numbers.Length - 1
-            For j As Integer = i + 1 To numbers.Length - 1
-                If numbers(i) > numbers(j) Then
-                    temp = numbers(i)
-                    numbers(i) = numbers(j)
-                    numbers(j) = temp
-                End If
-            Next
-        Next
-
-        For i As Integer = 0 To numbers.Length - 1
-            Console.Write(numbers(i) & " ")
-        Next
-        Console.WriteLine()
+        Console.WriteLine("Введите путь к файлу: ")
+        Dim path As String = Console.ReadLine()
+        Dim number As Integer = Modules.Module2.Read(path)
+        Console.WriteLine("Факториал числа {0} равен {1}", number,
+        Factorial(number))
 
     End Sub
+
+    Function Factorial(x As Integer) As Integer
+        If x = 1 Then
+            Return 1
+        Else
+            Return x * Factorial(x - 1)
+        End If
+    End Function
 
 End Module
