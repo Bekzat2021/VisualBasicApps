@@ -1,40 +1,34 @@
 ﻿Module Module1
 
-    Enum MathOperations
-        Add = 1
-        Subtract
-        Multiply
-        Devide
-    End Enum
-
     Sub Main()
-        Console.Write("Enter first value: ")
-        Dim value1 As Double = CDbl(Console.ReadLine())
 
-        Console.Write("Enter second value: ")
-        Dim value2 As Double = CDbl(Console.ReadLine())
+        Dim pointOne As New Point()
+        pointOne.X = 5
+        pointOne.Y = 7
 
-        Console.Write("Enter operation code: ")
-        Dim operation As MathOperations = CInt(Console.ReadLine())
+        Dim pointTwo As New Point()
+        pointTwo.X = 3
+        pointTwo.Y = 2
 
-        Calculate(value1, value2, operation)
+        Dim pointThree = pointOne + pointTwo
+
+        Console.WriteLine($"{pointThree.X}, {pointThree.Y}")
 
     End Sub
 
-    Sub Calculate(ByVal input1 As Double, ByVal input2 As Double,
-                  opertaion As MathOperations)
-        Dim result As Double = 0
-        Select Case opertaion
-            Case MathOperations.Add
-                result = input1 + input2
-            Case MathOperations.Subtract
-                result = input1 - input2
-            Case MathOperations.Multiply
-                result = input1 * input2
-            Case MathOperations.Devide
-                result = input1 / input2
-        End Select
-        Console.WriteLine("Result of opertion {0} {1} {2} = {3}", input1, opertaion, input2, result)
-    End Sub
+    Public Class Point
+        Public Property X() As Integer
+        Public Property Y() As Integer
+
+        Public Shared Operator +(firstPoint As Point, secondPoint As Point) As Point
+            Dim newPoint As New Point()
+            newPoint.X = firstPoint.X + secondPoint.X
+            newPoint.Y = firstPoint.Y + secondPoint.Y
+            Return newPoint
+        End Operator
+
+
+    End Class
 
 End Module
+
