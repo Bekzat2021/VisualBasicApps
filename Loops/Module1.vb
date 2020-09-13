@@ -2,31 +2,22 @@
 
     Sub Main()
 
-        Dim pointOne As New Point()
-        pointOne.X = 5
-        pointOne.Y = 7
+        Dim s1 As State = New State("US")
 
-        Dim pointTwo As New Point()
-        pointTwo.X = 3
-        pointTwo.Y = 2
-
-        Dim pointThree = pointOne + pointTwo
-
-        Console.WriteLine($"{pointThree.X}, {pointThree.Y}")
+        Dim s2 As State = New State("UK")
 
     End Sub
 
-    Public Class Point
-        Public Property X() As Integer
-        Public Property Y() As Integer
+    Public Class State
+        Public Name As String
+        Shared Sub New()
+            Console.WriteLine("Made first state")
+        End Sub
 
-        Public Shared Operator +(firstPoint As Point, secondPoint As Point) As Point
-            Dim newPoint As New Point()
-            newPoint.X = firstPoint.X + secondPoint.X
-            newPoint.Y = firstPoint.Y + secondPoint.Y
-            Return newPoint
-        End Operator
-
+        Sub New(ByVal name As String)
+            Me.Name = name
+            Console.WriteLine("State name {0}", name)
+        End Sub
 
     End Class
 
